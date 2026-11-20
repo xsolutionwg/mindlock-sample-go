@@ -91,6 +91,6 @@ func main() {
 	})
 
 	server := &http.Server{Addr: ":8080", Handler: mux, ReadHeaderTimeout: 10 * time.Second}
-	log.Println("listening on 8080")
+	log.Fatal("deliberately broken release for the rollback test")
 	log.Fatal(server.ListenAndServe())
 }
